@@ -8,7 +8,7 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(240, 240, 245);
+    background-color: rgb(21, 185, 235);
     color: rgb(4, 6, 64);
 }
 
@@ -22,20 +22,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 header {
-    background-color: rgb(3, 219, 252);
+    background-color: rgba(3, 219, 252, 0.8); /* Add some transparency */
     padding: 10px 0;
 }
 
 header .logo img {
-    height: 50px;
+    height: 80px;
 }
 
 header h1 {
-    font-size: 24px;
-    color: rgb(240, 240, 245);
+    font-size: 30px;
+    color: rgb(4, 6, 64);
+}
+
+nav {
+    position: relative;
 }
 
 nav ul {
@@ -54,7 +59,68 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: rgb(4, 6, 64);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(4, 6, 64);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links.open {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(3, 219, 252, 0.8);
+    text-align: center;
+}
+
+.nav-links.open ul {
+    flex-direction: column;
+    margin: 0;
+}
+
+.nav-links.open ul li {
+    margin: 10px 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 main {
@@ -78,6 +144,14 @@ section p {
     color: rgb(4, 6, 64);
 }
 
+.maintenance-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
 .whatsapp-button {
     display: inline-block;
     background-color: rgb(4, 6, 64);
@@ -90,12 +164,87 @@ section p {
 }
 
 .whatsapp-button:hover {
-    background-color: rgb(3, 219, 252);
+    background-color: rgb(3, 252, 36);
 }
 
 footer {
-    background-color: rgb(3, 219, 252);
+    background-color: rgba(3, 219, 252, 0.8); /* Add some transparency */
     padding: 10px 0;
     text-align: center;
     color: rgb(240, 240, 245);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .maintenance-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    header .logo img {
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 14
+    }
 }

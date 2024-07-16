@@ -5,71 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TND - The Nerd Department</title>
     <link rel="stylesheet" href="home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <!-- <div class="container header-content"> -->
-            
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#home" class="logo">
-                    <img src=".\TND_logo_icon.png" class="d-inline-block align-text-top" alt="TND Logo" width="50" height="50">
-                    TND - The Nerd Department
-                </a>
-                <!-- <h1></h1> -->
-
-                <ul class = "navbar-nav me-auto mb-2 mb-lg-0 left">
-
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <div class="container header-content">
+            <a href="#home" class="logo">
+                <img src="TND_logo_icon.png" alt="TND Logo">
+            </a>
+            <h1>TND - The Nerd Department</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#about">About Us</a></li>
                 </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </nav>
-        <!-- </div> -->
+        </div>
     </header>
+
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="background video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <main>
         <section id="home">
             <div class="container">
                 <h2>Welcome to TND - The Nerd Department</h2>
-                <p>Your trusted partner in web and software development solutions.</p>
-                <a href="https://wa.me/+27813071862" target="_blank" class="whatsapp-button">Chat with Us on WhatsApp</a>
+                <p>At TND, we are dedicated to providing top-notch web development and software solutions. Our team of experts is here to help you bring your tech projects to life. Explore our services, learn about our competitive pricing, and get in touch with us today!</p>
+            </div>
+        </section>        
+
+        <section id="image">
+            <div class="container">
+                <img src="Under_Maintenance.png" alt="Under Maintenance Image" class="maintenance-image">
             </div>
         </section>
 
         <section id="services">
             <div class="container">
                 <h2>Our Services</h2>
-                <p>Explore our range of services tailored to meet your tech needs.</p>
-                <!-- Add more details about services here -->
+                <p>We offer a comprehensive range of services tailored to meet your business needs:</p>
+
+                    <p><strong>Web Development:</strong> Custom websites, e-commerce solutions, content management systems, and more.</li>
+                    <p><strong>Software Development:</strong> Bespoke software solutions, mobile app development, and enterprise software.</li>
+                    <p><strong>UI/UX Design:</strong> User-friendly interface design, experience optimization, and prototyping.</li>
+                    <p><strong>Consulting:</strong> Technical consulting, project management, and IT strategy planning.</li>
+
+                <p>Explore each service to find the right solution for your business.</p>
             </div>
-        </section>
+        </section>        
 
         <section id="pricing">
             <div class="container">
                 <h2>Our Pricing</h2>
-                <p>View our competitive pricing plans.</p>
-                <!-- Add pricing details here -->
+                <p>We believe in transparent and competitive pricing. Our pricing plans are designed to provide value and flexibility for businesses of all sizes:</p>
+        
+                    <p><strong>Basic Plan:</strong> Ideal for startups and small businesses.</li>
+                    <p><strong>Standard Plan:</strong> Perfect for growing businesses.</li>
+                    <p><strong>Premium Plan:</strong> For enterprises needing advanced features and support.</li>
+                
+                <p>Contact us for a detailed quote tailored to your specific needs.</p>
             </div>
-        </section>
+        </section>        
 
         <section id="contact">
             <div class="container">
                 <h2>Contact Us</h2>
-                <p>Get in touch with us today!</p>
-                <!-- Add contact form or details here -->
+                <p>We'd love to hear from you! Whether you have a question about our services, need support, or want to discuss your project, our team is here to assist:</p>
+
+                    <p><strong>Email:</strong> siphomancam2@gmail.com | siphethon2@gmail.com</li>
+                    <p><strong>Phone:</strong> +27 81 307 1862 | +27 60 996 2915</li>
+                    <p><strong>Address:</strong> Remote, Johannesburg | Pretoria, South Africa</li>
+
+                <p>Or chat with us directly on WhatsApp by clicking the button below</p>
+                <a href="https://wa.me/+27609962915" class="whatsapp-button">WhatsApp Now!</a>
             </div>
         </section>
+        
 
         <section id="about">
             <div class="container">
                 <h2>About Us</h2>
-                <p>Learn more about TND - The Nerd Department.</p>
-                <!-- Add company information and team details here -->
+                <p>At TND, we pride ourselves on being a leading provider of innovative web and software solutions. Our mission is to empower businesses through technology by delivering high-quality, reliable, and scalable solutions. With years of experience and a team of skilled professionals, we are committed to helping you achieve your business goals. Learn more about our journey, values, and the team that makes it all happen.</p>
             </div>
         </section>
+        
+        
     </main>
 
     <footer>
@@ -77,5 +108,16 @@
             <p>&copy; 2024 TND - The Nerd Department. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
